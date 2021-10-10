@@ -1,0 +1,11 @@
+B
+
+    ¸LM]Ò	  ã               @   s(   d dl Z d dlZd dlmZ dd„ ZdS )é    N)Ú	UserAgentc             C   s”   t t d¡jƒ}tƒ jddddœ}d|d  d | d	d
+¡ d | d	d
+¡ d |  d
+ | d }tjd|||dd}t|j	ƒ t
+ |j	¡d dkS )NzXhttps://internshala.com/1-day-in-your-dream-company?utm_source=bb_wa&utm_medium=bb989790z3https://internshala.com/1-day-in-your-dream-companyz0application/x-www-form-urlencoded; charset=UTF-8ZXMLHttpRequest)z
+User-AgentZRefererzContent-TypezX-Requested-Withzcsrf_test_name=Zcsrf_cookie_namez&campaign=big_brand_aug19&campaign_type=tier_2_campaign&campaign_param=&utm_source=bb_wa&utm_medium=bb989790&utm_campaign=&email=z%40ú@z
+&password=z&first_name=z&last_name=a‚  &college=RGPV+Collage&city_sublocality_level_2=&city_sublocality_level_1=&city_locality=Indore&city_administrative_area_level_2=Indore&city_administrative_area_level_1=Madhya+Pradesh&city_country=India&city_lat=22.7195687&city_lng=75.85772580000003&city=Indore%2C+Madhya+Pradesh%2C+India&currently_pursuing=ug&degree=Bachelor+of+Computer+Applications+(BCA)&start_year=2016&end_year=2019z3https://internshala.com/registration/student_submitF)ÚheadersÚcookiesÚdataÚverifyZsuccessT)ÚdictÚrequestsÚgetr   r   ÚrandomÚreplaceÚpostÚprintÚtextÚjsonÚloads)ÚfnameÚlnameÚumailr   r   r   Úresponse© r   ú=D:\Projects\Personal\Automatic-Email-Verification\register.pyÚregister   s    
+:
+r   )r	   r   Úfake_useragentr   r   r   r   r   r   Ú<module>   s   

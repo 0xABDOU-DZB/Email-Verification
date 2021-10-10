@@ -1,0 +1,36 @@
+B
+
+    ¸LM]_  ã               @   s.   d dl Z d dlZd	dd„Zdd„ Zdd„ ZdS )
+é    Né   c             C   s  t jdd|  dd¡idj}t d|¡}|d kr4dS | d¡}t d	|¡}g }	xÂ|D ]º}
+d
+}d
+}d
+}
+d
+}|r†t d|
+d  ¡ ¡ d¡}|r¤t d|
+d  ¡ ¡ d¡}|rÂt d
+|
+d  ¡ ¡ d¡}
+|rút  |¡}|j	dkrút d|j¡}|d krú| d¡}|	 
+||||
+dœ¡ qTW |	S )Nz&https://temp-mail.org/en/option/check/Úmailú@z%40)Zcookiesz(?<=<ul>)((.|\s)*?)(?=</ul>)Fr   z(?<=<li >)((.|\s)*?)(?=<\/li>)Ú z(?<=href=")((.|\s)*?)(?=")zG(?<=<span class="bullets-ico is-active"><\/span>)((.|\s)*?)(?=<\/span>)z$(?<=<\/small>)((.|\s)*?)(?=<\/span>)éÈ   z_(?<=<div class="inbox-data-content-intro">)((.|\s)*?)(?=d-none visable-xs-sm mobileAttachments))ÚlinkÚbodyÚsenderÚsubject)ÚrequestsÚgetÚreplaceÚtextÚreÚsearchÚgroupÚfindallÚstripÚstatus_codeÚappend)ZemailAddressr   r
+   r	   r   ÚresultZmatchedTableÚdataZmatchedMailsZtoReturnr   Z	link_dataZsender_dataZsubject_dataZ	body_dataÚrequestZbody_re© r   úOD:\Projects\Personal\Automatic-Email-Verification\AutomaticEmailVerification.pyÚfetch   sJ    
+
+
+
+
+
+r   c              C   s¸   d} d}d}d| d | d }t  | ¡}|jdkr¨|j}t ||¡}|d krž| d¡ ¡ }d	}d
+}d| d | d }t ||¡}|d kr”|}|S t	dƒ q´t	d
+ƒ nt	d|  ƒ d S )Nz'https://temp-mail.org/en/option/change/z8<select id="domain" name="domain" class="select-domain">z	</select>z(?<=z)(.|\s)*?(?=ú)r   r   z<option value="z">z)(.*)(?=zCan't Search For OptionszCan't Search For SelectzCan't Fatch the url )
+r   r   r   r   r   r   r   r   r   Úexit)ÚurlÚstartingTextÚ
+endingTextÚ
+expressionr   r   ÚsearchForSelectZsearchForOptionsr   r   r   ÚgetAvailableDomains2   s(    
+
+
+
+r#   c               C   s
+   t ƒ d S )Nr   )r#   r   r   r   r   Ú
+getADomainL   s    r$   )r   r   r   r   )r   r   r   r#   r$   r   r   r   r   Ú<module>   s   
+-
